@@ -8,5 +8,4 @@ A minimalist habit and todo tracker with local storage. Clean UI, and responsive
 
 
 ## Live Demo
-Live site is at 
-`https://google.com`
+Live site is at https://habitstreakstracker.netlify.app/
