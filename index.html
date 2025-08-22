@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habit Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quote</h1>
+    <div class="quote" role="region" aria-label="daily quote">
+      <button class="icon-btn edit-btn" aria-label="edit quote" title="Edit quote" data-action="edit-quote">✎</button>
+      <p id="quote-text">Der Erfolg, den du suchst, steckt in der Arbeit vor der du dich drückst</p>
+    </div>
+
+    <div class="section-head">
+      <h2 style="margin-right:auto">Habits Streaks</h2>
+      <button class="add-btn" data-action="add-habit">Add Habit</button>
+    </div>
+
+    <div class="grid" id="habit-grid"></div>
+
+    <div class="section-head">
+      <h2 style="margin-right:auto">ToDos</h2>
+      <button class="add-btn" data-action="add-todo">Add Item</button>
+    </div>
+
+    <div class="todo-wrap" id="todo-wrap"></div>
+  </div>
+
+  <footer>
+    Habit Tracker Demo
+  </footer>
+
+  <template id="habit-card-template">
+    <div class="card col-4" data-id="">
+      <div class="card-head">
+        <div class="card-title" data-field="title">Habit</div>
+        <div class="icon-row">
+          <button class="icon-btn" aria-label="edit habit" title="Edit" data-action="edit-habit">✎</button>
+          <button class="icon-btn" aria-label="delete habit" title="Delete" data-action="delete-habit">🗑</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="streak">
+          <div class="streak-number" data-field="count">0</div>
+          <div class="controls">
+            <button class="round success" aria-label="increase" data-action="inc">+</button>
+            <button class="round danger" aria-label="decrease" data-action="dec">−</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="todo-item-template">
+    <div class="todo-item" data-id="">
+      <input type="checkbox" aria-label="toggle complete" data-action="toggle" />
+      <div class="todo-text" data-field="text">New item</div>
+      <div class="todo-actions">
+        <button class="icon-btn" aria-label="edit item" data-action="edit-todo">✎</button>
+        <button class="icon-btn" aria-label="delete item" data-action="delete-todo">🗑</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
