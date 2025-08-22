@@ -7,13 +7,12 @@ function defaultState(){
   return {
     quote: initialQuote,
     habits: [
-      { id: uid(), title: 'Exercise', count: 0 },
-      { id: uid(), title: 'Learn German', count: 0 },
-      { id: uid(), title: 'No Porn', count: 0 },
-      { id: uid(), title: 'Make Up Bed', count: 0 },
-      { id: uid(), title: 'Sweep Room', count: 0 }
+      { id: uid(), title: 'Exercise', count: 0 }
     ],
-    todos: [ { id: uid(), text: 'fdsfdsfdsfds', completed: false } ]
+    todos: [
+      { id: uid(), text: 'Go shopping', completed: false },
+      { id: uid(), text: 'Finish chapter', completed: true }
+    ]
   };
 }
 
